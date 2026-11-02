@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Data Karyawan</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2>Daftar Karyawan</h2>
+    <table class="table table-bordered table-striped mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nama Karyawan</th>
+                <th>Divisi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% listKaryawan.forEach(function(karyawan) { %>
+            <tr>
+                <td><%= karyawan.id %></td>
+                <td><%= karyawan.nama %></td>
+                <td><%= karyawan.divisi %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-secondary">Kembali</a>
+</body>
+</html>
